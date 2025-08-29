@@ -54,7 +54,6 @@ export class UserService {
         },
       });
     } catch (err: any) {
-      // Handle unique constraint race conditions
       if (err?.code === 'P2002') {
         const fields = err.meta?.target ?? [];
         throw new Error(`Unique constraint failed on the fields: ${Array.isArray(fields) ? fields.join(', ') : fields}`);

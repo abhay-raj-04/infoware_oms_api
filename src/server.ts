@@ -7,11 +7,10 @@ const PORT = process.env.PORT || 3000;
 async function startServer() {
   try {
     await prisma.$connect();
-    console.log('Database connected successfully via Prisma!');
+    console.log('Database connected successfully');
 
     app.listen(PORT, () => {
-      console.log(`Server is running on port ${PORT}`);
-      console.log(`Access it at http://localhost:${PORT}`);
+      console.log(`Server is running at http://localhost:${PORT}`);
     });
   } catch (error) {
     console.error('Failed to connect to database or start server:', error);
