@@ -1,29 +1,8 @@
 # .gitignore
 node_modules/
 dist/
-/.env
-.env.*
-npm-debug.log*
-yarn-debug.log*
-.vscode/
-.idea/
-.DS_Store
+.env
 /generated/prisma
-/prisma/migrations
-/prisma/dev.db
-/node_modules/
-/*.log
-.eslintcache
-/.nyc_output
-.turbo
-.parcel-cache
 
-# TypeScript
-*.tsbuildinfo
 
-# Build output
-dist/
-
-# Prisma generated client
-node_modules/.prisma
 

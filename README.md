@@ -1,6 +1,6 @@
-# infoware_oms_api
+# Order Management System API
 
-Mini OMS API — TypeScript + Express + Prisma
+Mini Order Management System API — TypeScript + Express + Prisma
 
 Setup
 
@@ -12,6 +12,6 @@ Setup
 
 API
 
-- POST /api/v1/auth/register
-- POST /api/v1/auth/login
+- POST /api/auth/register
+- POST /api/auth/login
 

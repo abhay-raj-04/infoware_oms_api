@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get('/', (req: Request, res: Response) => {
-  res.status(200).json({ message: 'Welcome to the Mini OMS API!' });
+  res.status(200).json({ message: 'Welcome to the Order Management System API!' });
 });
 
 // Auth routes

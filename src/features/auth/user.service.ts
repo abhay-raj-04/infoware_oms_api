@@ -31,7 +31,6 @@ export class UserService {
   async register(data: RegisterUserDto): Promise<AuthResponseDto> {
     const { username, email, password, role } = data;
 
-    // Early checks to provide friendly conflict messages and avoid a DB error
     const userByEmail = await prisma.user.findUnique({ where: { email } });
     if (userByEmail) {
       throw new Error('User with this email already exists.');

@@ -1,6 +1,5 @@
-// src/server.ts
-import 'dotenv/config'; // <--- Load environment variables first, ESM style
-import app from './app.js'; // <--- Use .js extension in imports for consistency with compiled output
+import 'dotenv/config'; 
+import app from './app.js'; 
 import prisma from "./db/prisma.js"
 
 const PORT = process.env.PORT || 3000;
