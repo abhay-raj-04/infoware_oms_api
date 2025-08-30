@@ -1,6 +1,6 @@
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import prisma from '../../db/prisma.js';
+import prisma from '../../database/prisma.js';
 import { JWT_SECRET, JWT_EXPIRATION_TIME } from '../../config/jwt.js';
 
 type Role = 'BUYER' | 'SUPPLIER' | 'ADMIN';

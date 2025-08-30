@@ -1,0 +1,66 @@
+openapi: 3.0.3
+info:
+  title: OMS API
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+paths:
+  /api/auth/register:
+    post:
+      summary: Register
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username: { type: string }
+                email: { type: string }
+                password: { type: string }
+                role: { type: string, enum: [BUYER, SUPPLIER, ADMIN] }
+      responses:
+        '201': { description: Created }
+  /api/products:
+    get:
+      summary: List products
+      responses:
+        '200': { description: OK }
+    post:
+      summary: Create/Update product (supplier)
+      responses:
+        '201': { description: Created }
+  /api/products/{id}/stock:
+    patch:
+      summary: Update stock
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: OK }
+  /api/orders:
+    get:
+      summary: List orders (role-aware)
+      responses:
+        '200': { description: OK }
+    post:
+      summary: Place order (buyer)
+      responses:
+        '201': { description: Created }
+  /api/orders/{id}/status:
+    patch:
+      summary: Change order status (admin)
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: OK }
+  /api/admin/analytics:
+    get:
+      summary: Aggregated metrics
+      responses:
+        '200': { description: OK }

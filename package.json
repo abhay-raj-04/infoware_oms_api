@@ -218,7 +218,8 @@
     "build": "tsc",
     "dev": "nodemon --exec \"node --loader ts-node/esm\" src/server.ts",
     "prisma:generate": "npx prisma generate",
-    "prisma:migrate:dev": "npx prisma migrate dev"
+    "prisma:migrate:dev": "npx prisma migrate dev",
+    "seed": "tsx src/db/seed.ts"
   },
   "keywords": [],
   "author": "",
