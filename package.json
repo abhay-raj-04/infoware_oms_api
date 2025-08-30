@@ -219,7 +219,7 @@
     "dev": "nodemon --exec \"node --loader ts-node/esm\" src/server.ts",
     "prisma:generate": "npx prisma generate",
     "prisma:migrate:dev": "npx prisma migrate dev",
-    "seed": "tsx src/db/seed.ts"
+  "seed": "tsx src/database/seed.ts"
   },
   "keywords": [],
   "author": "",
